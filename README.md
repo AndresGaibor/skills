@@ -6,23 +6,33 @@ Colección de skills especializadas para **Claude Code**, **Claude Desktop**, **
 
 ---
 
-## ⚡ Instalación Rápida (30 segundos)
+## ⚡ Instalación Rápida
 
-### Opción A: Vía `npx skills` (Recomendada)
+### Opción 1: Instrucción directa para tu Agente / IA (Copiar y Pegar)
 
-Instala directamente las skills en tu proyecto o agente usando el CLI oficial:
+Pega el siguiente prompt en la conversación con tu agente (Claude Code, Codex, Cursor, etc.) para que se encargue de instalar o actualizar las skills automáticamente:
+
+```markdown
+Por favor instala/actualiza las skills de https://github.com/AndresGaibor/skills.git en mis carpetas globales ~/.agents/skills/ y ~/.claude/skills/. Puedes ejecutar:
+npx skills@latest add AndresGaibor/skills -y || (git clone https://github.com/AndresGaibor/skills.git /tmp/skills-repo && mkdir -p ~/.agents/skills ~/.claude/skills && cp -r /tmp/skills-repo/plan-curated-work /tmp/skills-repo/audit-product-ui ~/.agents/skills/ && cp -r /tmp/skills-repo/plan-curated-work /tmp/skills-repo/audit-product-ui ~/.claude/skills/ && rm -rf /tmp/skills-repo)
+```
+
+---
+
+### Opción 2: Vía `npx skills` (CLI)
 
 ```bash
 npx skills add AndresGaibor/skills
 ```
 
-El menú interactivo te permitirá elegir qué skills instalar (`plan-curated-work`, `audit-product-ui`) y en qué agente configurarlas (**Claude Code**, **Codex**, etc.).
+Para actualizar en el futuro todas tus skills instaladas vía CLI:
+```bash
+npx skills update
+```
 
 ---
 
-### Opción B: Clonar e instalar en tu máquina local
-
-Si prefieres tener el repositorio localmente y sincronizar tu Mac con tu servidor/VM por SSH:
+### Opción 3: Clonar e instalar en máquina local + VM
 
 ```bash
 git clone https://github.com/AndresGaibor/skills.git ~/code/skills
@@ -67,4 +77,3 @@ Si tienes clonado este repositorio localmente, cuando hagas cambios ejecuta:
 ```bash
 ./update-skills.sh
 ```
-*Este script copiará automáticamente los cambios a `~/.claude/skills/`, `~/.agents/skills/` y (si hay conexión SSH) a tu VM `oci`.*
