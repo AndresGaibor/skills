@@ -1,0 +1,14 @@
+interface:
+  display_name: Planificar con contexto curado
+  short_description: Diseño y funcionalidades con delegación manual
+  default_prompt: Usa $plan-curated-work para proponer una solución y pedir al recopilador
+    únicamente el contexto necesario.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

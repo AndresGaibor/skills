@@ -1,0 +1,14 @@
+interface:
+  display_name: Auditar UI y UX de producto
+  short_description: Auditoría UI/UX con evidencia y recomendaciones
+  default_prompt: Usa $audit-product-ui para auditar esta interfaz de escritorio y
+    entregar una propuesta principal con evidencia y criterios de aceptación.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

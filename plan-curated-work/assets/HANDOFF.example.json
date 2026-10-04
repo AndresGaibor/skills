@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "project_id": "REPLACE_PROJECT_ID",
+  "repo_root": "REPLACE_ABSOLUTE_VM_REPO_PATH",
+  "canonical_docs_relative": "docs/planner",
+  "mac_ssh_alias": "macbook",
+  "vm_ssh_alias": "oci",
+  "mac_planner_root": "REPLACE_ABSOLUTE_MAC_PROJECT_PATH",
+  "desktop_only": true,
+  "inactive_after_days": 14,
+  "execution_start": "manual",
+  "git_integration": "single_coordinator",
+  "context_publisher": "REPLACE_OWNER",
+  "transport_commands": {},
+  "note": "Template only. Verify aliases and absolute paths before operation; keep credentials outside this file."
+}
