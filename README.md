@@ -8,36 +8,28 @@ Colección de skills especializadas para **Claude Code**, **Claude Desktop**, **
 
 ## ⚡ Instalación Rápida
 
-### Opción 1: Instrucción directa para tu Agente / IA (Copiar y Pegar)
+### Opción A: Vía CLI `npx skills` (Estándar y recomendado)
 
-Pega el siguiente prompt en la conversación con tu agente (Claude Code, Codex, Cursor, etc.) para que se encargue de instalar o actualizar las skills automáticamente:
-
-```markdown
-Por favor instala/actualiza las skills de https://github.com/AndresGaibor/skills.git en mis carpetas globales ~/.agents/skills/ y ~/.claude/skills/. Puedes ejecutar:
-npx skills@latest add AndresGaibor/skills -y || (git clone https://github.com/AndresGaibor/skills.git /tmp/skills-repo && mkdir -p ~/.agents/skills ~/.claude/skills && cp -r /tmp/skills-repo/plan-curated-work /tmp/skills-repo/audit-product-ui ~/.agents/skills/ && cp -r /tmp/skills-repo/plan-curated-work /tmp/skills-repo/audit-product-ui ~/.claude/skills/ && rm -rf /tmp/skills-repo)
-```
-
----
-
-### Opción 2: Vía `npx skills` (CLI)
+Instala directamente las skills en tu proyecto o agente usando el CLI oficial:
 
 ```bash
 npx skills add AndresGaibor/skills
 ```
 
-Para actualizar en el futuro todas tus skills instaladas vía CLI:
+Para actualizar en cualquier momento todas tus skills en tu máquina o servidor:
 ```bash
 npx skills update
 ```
 
 ---
 
-### Opción 3: Clonar e instalar en máquina local + VM
+### Opción B: Prompt para tu Agente / IA (Copiar y Pegar)
 
-```bash
-git clone https://github.com/AndresGaibor/skills.git ~/code/skills
-cd ~/code/skills
-./update-skills.sh
+Pega el siguiente prompt en la conversación con tu agente para que las instale automáticamente:
+
+```markdown
+Por favor instala o actualiza las skills de https://github.com/AndresGaibor/skills.git ejecutando:
+npx skills@latest add AndresGaibor/skills -y
 ```
 
 ---
@@ -60,20 +52,8 @@ skills/
 │   ├── assets/
 │   ├── references/
 │   └── scripts/
-├── audit-product-ui/      # Skill de auditoría de producto y usabilidad
-│   ├── SKILL.md
-│   ├── assets/
-│   └── references/
-├── update-skills.sh       # Script de actualización local y remota (SSH)
-└── README.md
-```
-
----
-
-## 🔄 Mantener tus Skills Actualizadas
-
-Si tienes clonado este repositorio localmente, cuando hagas cambios ejecuta:
-
-```bash
-./update-skills.sh
+└── audit-product-ui/      # Skill de auditoría de producto y usabilidad
+    ├── SKILL.md
+    ├── assets/
+    └── references/
 ```
